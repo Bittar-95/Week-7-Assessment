@@ -23,8 +23,24 @@ Output =>
 
 */
 
-function MultiByNum1OrNum2() {
-  // WRITE YOUR CODE UNDER THIS LINE         
+function MultiByNum1OrNum2(array,num1,num2) {
+
+  var multipleArray = array.map(function(x)
+  {
+    if(x%2!==0)
+    {
+      return x*num2
+
+    }
+    else
+    {
+      return x*num1;
+
+    }
+  });
+
+return multipleArray;
+
 }
 
 /* Q2:
@@ -58,8 +74,19 @@ Output =>
 ]
 */
 
-function longerAndYounger() {
-  // WRITE YOUR CODE UNDER THIS LINE         
+function longerAndYounger(arrayOfObjetcs,num1,num2) {
+
+
+  var newArray = arrayOfObjetcs.filter(function(x)
+  {
+    if(x.name.length>num1 && x.age<num2)
+    {return x};
+
+  }
+  );
+
+  return newArray;
+  
 }
 
 /* Q3:
@@ -89,8 +116,29 @@ Output =>
 "alice, fried chiken, pizaa, burger, hot dog, eggs"
   
 */
-function nameAndAllFoods() {
-  // WRITE YOUR CODE UNDER THIS LINE         
+function nameAndAllFoods(arraOfObject,num) {
+
+  var result =arrOfObj2.reduce(function(accumulator, currentValue, currentIndex) {
+    
+    if(currentIndex===num){
+     accumulator+=currentValue.name;
+     return accumulator;
+
+    }
+ accumulator+= ' ' + currentValue.food+' ';
+ return accumulator;
+
+alert(currentIndex);
+   
+    
+    },'');
+
+
+ 
+  return result;
+  
+
+
 }
 
 
@@ -111,3 +159,5 @@ You need to write the solution in the q4.html
   a. when click on the button with id "no"  => cahnge the color of the div with class "main" to red
   b. when click on the button with id "yes" => cahnge the color of the div with class "main" to green
 */
+
+
